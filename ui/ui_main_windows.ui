@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1224</width>
+    <height>884</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Allplan - SmartCatalog Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../icones/icons.qrc">
+    <normaloff>:/Images/asc.svg</normaloff>:/Images/asc.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {background:rgb(248, 248, 248)}</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>0</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>9</number>
+    </property>
+    <item row="0" column="0" colspan="3">
+     <widget class="QWidget" name="windows_title" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_32">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>6</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="menu_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <property name="toolTip">
+          <string>Menu</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/menu.svg</normaloff>:/Images/menu.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Ctrl+N</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="new_bt">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Créer un nouveau Smart-Catalogue (CTRL+N)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/catalog.svg</normaloff>:/Images/catalog.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Ctrl+N</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="open_layer">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="open_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Ouvrir un catalogue (CTRL+O)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/open_catalog.svg</normaloff>:/Images/open_catalog.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string notr="true">Ctrl+O</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="open_list_bt">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>12</width>
+             <height>12</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="parameters_bt">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <property name="toolTip">
+          <string>Modifier le chemin de données</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/options.svg</normaloff>:/Images/options.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="save_bt">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Enregistrer le Smart-Catalogue (CTRL+S)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/save.svg</normaloff>:/Images/save.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Ctrl+S</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="save_as_bt">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Enregistrer le Smart-Catalogue dans un nouveau dossier (CTRL + MAJ + S)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/save_as.svg</normaloff>:/Images/save_as.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>18</width>
+           <height>18</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="update_cat_bt">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Mettre à jour les projets utilisant ce catalogue (CTRL+M)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/update_cat.svg</normaloff>:/Images/update_cat.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>18</width>
+           <height>18</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="undo_layer">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="undo_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="toolTip">
+            <string>Annuler (Ctrl + Z)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/undo.svg</normaloff>:/Images/undo.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string notr="true">Ctrl+Z</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="undo_list_bt">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="toolTip">
+            <string>Annuler (Ctrl + Z)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>12</width>
+             <height>12</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="redo_layer">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="redo_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="toolTip">
+            <string>Rétablir (Ctrl + Y)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/redo.svg</normaloff>:/Images/redo.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string notr="true">Ctrl+Y</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="redo_list_bt">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="toolTip">
+            <string>Rétablir (Ctrl + Y)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>12</width>
+             <height>12</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="search_layer">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="search_line">
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{padding-left:5px; border: 1px solid #8f8f91;border-radius:5px; }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Rechercher</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="search_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Lancer la recherche</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px solid #8f8f91; border-radius:5px; } 
+QPushButton:checked{border-width: 1px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #D8D8D8, stop:1 #FFFFFF); }
+QPushButton:hover{border-width:1px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/search.svg</normaloff>:/Images/search.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="search_error_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Lancer la recherche des Formules contenant des erreurs</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px solid #8f8f91; border-radius:5px } 
+QPushButton:checked{border: 2px solid orange; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #D8D8D8, stop:1 #FFFFFF); padding-left: 5px; padding-right: 5px;}
+QPushButton:hover{border: 1px solid #8f8f91; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/formula_error_search.svg</normaloff>:/Images/formula_error_search.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="search_replace_bt">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Rechercher et remplacer</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 0px}
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #F8F8F8); border: 1px solid #8f8f91; border-radius:5px }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); border: 1px solid #8f8f91; border-radius:5px }
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/search_replace.svg</normaloff>:/Images/search_replace.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string notr="true">Ctrl+H</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QWidget" name="actionbar" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#actionbar { border:1px solid #B2B2B2}</string>
+      </property>
+      <layout class="QGridLayout" name="actionbar_layer">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="6" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="move_down_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Descendre élément(s) dans la hiérarchie (Ctrl + clic = Placer en dernier)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2; border-right:1px solid #B2B2B2;}
+QPushButton:hover{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/move_down.svg</normaloff>:/Images/move_down.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="21" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="model_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Afficher et gérer les modèles</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/attribute_model_show.svg</normaloff>:/Images/attribute_model_show.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="15" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="del_bt">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Supprimer (Suppr)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/delete.svg</normaloff>:/Images/delete.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Del</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="27">
+        <spacer name="actionbar_spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="25" colspan="2">
+        <widget class="QLabel" name="library_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Bible externe</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="23" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="model_add_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Enregister attributs actuels comme nouveau modèle</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;border-right:1px solid #B2B2B2;}
+QPushButton:hover{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/attribute_model_save.svg</normaloff>:/Images/attribute_model_save.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="21" colspan="4">
+        <widget class="QLabel" name="model_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Modèles</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="15" colspan="6">
+        <widget class="QLabel" name="edit_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Éditer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4" colspan="4">
+        <widget class="QLabel" name="move_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Déplacer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QLabel" name="display_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-left:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Affichage</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="10" rowspan="2">
+        <widget class="QWidget" name="material" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#material {border:0px; padding-left:1px; padding-right:1px;  border-top:1px solid #B2B2B2;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="material_add_bt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un nouvel ouvrage (CTRL + clic = Ajouter jusqu'à 10 ouvrages)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {padding-top:5px} 
+QPushButton:pressed {border:0px}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/material.png</normaloff>:/Images/material.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="material_list_bt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un ou plusieurs ouvrages selon un modèle d'attributs (CTRL + clic = Ajouter jusqu'à 10 ouvrages)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #BAD0E7)}
+QPushButton:pressed {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC)}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="2" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="collapse_all_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Replier l'ensemble des dossiers et des ouvrages</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;border-right:1px solid #B2B2B2;}
+QPushButton:hover{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/collapse_all.png</normaloff>:/Images/collapse_all.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="17" rowspan="2">
+        <widget class="QPushButton" name="cut_bt">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Couper (CTRL + X)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/cut.svg</normaloff>:/Images/cut.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Ctrl+X</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="12" rowspan="2">
+        <widget class="QWidget" name="link" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#link {border:0px; padding-left:1px; padding-right:1px;  border-top:1px solid #B2B2B2;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="link_add_bt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un nouveau lien</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {padding-top:5px} 
+QPushButton:pressed {border:0px}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/link.png</normaloff>:/Images/link.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="link_list_bt">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un lien déjà existant</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #BAD0E7)}
+QPushButton:pressed {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC)}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="expand_all_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Déplier l'ensemble des dossiers et des ouvrages</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2; border-left:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/expand_all.png</normaloff>:/Images/expand_all.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="move_up_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Monter élément(s) dans la hiérarchie (Ctrl + clic = Placer en premier)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/move_up.svg</normaloff>:/Images/move_up.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="8" colspan="7">
+        <widget class="QLabel" name="add_title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background: #BAD0E7; color: #4D4D4D; border-right:1px solid #B2B2B2; border-bottom:1px solid #B2B2B2; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="25" rowspan="2" colspan="2">
+        <widget class="QPushButton" name="library_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Bible externe</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;border-right:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/external_bdd_option.svg</normaloff>:/Images/external_bdd_option.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="19" rowspan="2">
+        <widget class="QWidget" name="paste" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#paste {border:0px; padding-left:1px; padding-right:1px;  border-top:1px solid #B2B2B2; ; border-right:1px solid #B2B2B2}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="paste_bt">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Coller (CTRL+ V)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {padding-top:5px} 
+QPushButton:pressed {border:0px}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/paste.svg</normaloff>:/Images/paste.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+V</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="paste_list_bt">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Coller</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #BAD0E7)}
+QPushButton:pressed {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC)}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="9" rowspan="2">
+        <widget class="QPushButton" name="folder_add_bt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Ajout un dossier (CTRL + clic = Ajouter jusqu'à 10 dossiers)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/folder.png</normaloff>:/Images/folder.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="18" rowspan="2">
+        <widget class="QPushButton" name="copy_bt">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Copier (CTRL + C)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{padding-bottom: 8px; border-top:1px solid #B2B2B2;}
+QPushButton:hover{border-right:1px solid #B2B2B2; border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF)}
+QPushButton:pressed{border-right:1px solid #B2B2B2; border-left:1px solid #B2B2B2; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC)}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../icones/icons.qrc">
+           <normaloff>:/Images/copy.svg</normaloff>:/Images/copy.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string notr="true">Ctrl+C</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="13" rowspan="2">
+        <widget class="QWidget" name="attribute" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget#attribute {border:0px; padding-left:1px; padding-right:1px;  border-top:1px solid #B2B2B2; border-right:1px solid #B2B2B2}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="attribute_add_bt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un nouvel attribut</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {padding-top:5px} 
+QPushButton:pressed {border:0px}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/attribute_add.png</normaloff>:/Images/attribute_add.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="attribute_list_bt">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un ou plusieurs attributs selon un modèle d'attributs</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #BAD0E7)}
+QPushButton:pressed {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC)}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="11" rowspan="2">
+        <widget class="QWidget" name="component" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#component {border:0px; padding-left:1px; padding-right:1px;  border-top:1px solid #B2B2B2;}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="component_add_bt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un nouveau composant (CTRL + clic = Ajouter jusqu'à 10 composants)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {padding-top:5px} 
+QPushButton:pressed {border:0px}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/component.png</normaloff>:/Images/component.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="component_list_bt">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Ajouter un ou plusieurs composants selon un modèle d'attributs (CTRL + clic = Ajouter jusqu'à 10 composants)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #BAD0E7)}
+QPushButton:pressed {border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2; border-top:1px solid #B2B2B2;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC)}</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icones/icons.qrc">
+              <normaloff>:/Images/spin_down.svg</normaloff>:/Images/spin_down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="27">
+        <widget class="QWidget" name="end_title" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget#end_title{color: #4D4D4D; border:1px solid #B2B2B2; border-top: 0px; border-left: 0px; background: #BAD0E7; padding-left: 5px; padding-right: 5px; }</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>10</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QTreeView" name="hierarchy">
+       <property name="minimumSize">
+        <size>
+         <width>450</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="lineWidth">
+        <number>9</number>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>true</bool>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="animated">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="attributes_detail">
+       <property name="minimumSize">
+        <size>
+         <width>752</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <spacer name="horizontalSpacer_30">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>6</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <spacer name="horizontalSpacer_9">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>6</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>hierarchy</tabstop>
+  <tabstop>attributes_detail</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../icones/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

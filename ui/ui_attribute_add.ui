@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AttributeAdd</class>
+ <widget class="QWidget" name="AttributeAdd">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1112</width>
+    <height>743</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Attribut</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../icones/icons.qrc">
+    <normaloff>:/Images/asc.svg</normaloff>:/Images/asc.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#AttributeAdd{background-color: #FFFFFF; }</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>15</number>
+   </property>
+   <item row="1" column="1">
+    <layout class="QHBoxLayout" name="central_layer">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QListWidget" name="group_list">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>Tous les attributs Allplan</string>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">--------------------------------</string>
+        </property>
+        <property name="flags">
+         <set>NoItemFlags</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Favoris Ouvrage</string>
+        </property>
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Favoris Composant</string>
+        </property>
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Favoris Formule</string>
+        </property>
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">--------------------------------</string>
+        </property>
+        <property name="flags">
+         <set>NoItemFlags</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Attribut utilisateur</string>
+        </property>
+        <property name="font">
+         <font>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="background">
+         <brush brushstyle="NoBrush">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">--------------------------------</string>
+        </property>
+        <property name="flags">
+         <set>NoItemFlags</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Généralité</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Architecture générale</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Attributs matériau</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Architecture - quantités</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Architecture - spéciale</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Architecture - couverture toit</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Portes, Fenêtre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DIN 277, surface habitable, BauNVO</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ingénierie</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Construction métallique</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Alfa sync</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Aménagement du paysage</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Urbanisme</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Isolation thermique</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Calque</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Plan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Index de plan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Projet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Modeleur de terrain 3D</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Inserts</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Éléments de structure préfa spéci. 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Éléments de structure préfa spéci. 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Éléments de structure préfa divers</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Bridge</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cadastre des conduites</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Profils</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Génie civil</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Module d'extensions internes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">IFC</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Classification</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Projets modèles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Allplan Exchange</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Répartitions intelligentes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fluides-Chauffage</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fluides-Ventilation</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fluides-Electricité</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fluides-Sanitaire</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fluides-Supplément</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>IBD Ouvrages</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>IBD Ingénierie</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Allplan Suisse</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Allplan International</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Attributs de construction AT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Nevaris</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Contrôle du chevauchement</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="attributes_list">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QHeaderView {background-color: rgb(216, 223, 232)}</string>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>9</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>9</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QWidget" name="fond" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>38</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>38</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#fond{background: #DBE4EE}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ok">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 1px solid #8f8f91; border-radius: 5px ; padding-right: 10px; padding-left: 10px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #BAD0E7); }
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }</string>
+        </property>
+        <property name="text">
+         <string> Ajouter</string>
+        </property>
+        <property name="shortcut">
+         <string notr="true">Ctrl+S</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="quit">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 1px solid #8f8f91; border-radius: 5px ; padding-right: 10px; padding-left: 10px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #BAD0E7); }
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }</string>
+        </property>
+        <property name="text">
+         <string> Quitter</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>6</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QWidget" name="actionbar" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>71</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>71</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#actionbar { border:1px solid #B2B2B2}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="material_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 0px solid #B2B2B2; padding-top: 1px; padding-right: 1px; padding-left: 1px; }
+QPushButton:checked{border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #D8D8D8, stop:1 #FFFFFF); }
+QPushButton:hover{border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../icones/icons.qrc">
+          <normaloff>:/Images/material.png</normaloff>:/Images/material.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="11">
+       <spacer name="actionbar_spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="formula_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 0px solid #B2B2B2; border-right-width: 1px; padding-top: 1px; padding-left: 1px; }
+QPushButton:checked{border-top-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #D8D8D8, stop:1 #FFFFFF); }
+QPushButton:hover{border-top-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../icones/icons.qrc">
+          <normaloff>:/Images/formula.svg</normaloff>:/Images/formula.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="import_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Impoter favoris</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 0px solid #B2B2B2; padding-top: 1px; padding-right: 1px; }
+QPushButton:hover{border-top-width: 1px; border-right-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }
+QPushButton:pressed{border-top-width: 1px; border-right-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); }</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../icones/icons.qrc">
+          <normaloff>:/Images/favorite_open.svg</normaloff>:/Images/favorite_open.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="export_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Exporter favoris</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 0px solid #B2B2B2; border-right-width: 1px; padding-top: 1px; padding-left: 1px; }
+QPushButton:hover{border-top-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }
+QPushButton:pressed{border-top-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #8FADCC); }</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../icones/icons.qrc">
+          <normaloff>:/Images/favorite_save.svg</normaloff>:/Images/favorite_save.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6" colspan="5">
+       <widget class="QWidget" name="search_widget" native="true">
+        <property name="styleSheet">
+         <string notr="true">QWidget#search_widget{border-right: 1px solid #B2B2B2;}</string>
+        </property>
+        <layout class="QHBoxLayout" name="layer_recherche">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>15</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="search_bar">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Rechercher</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{border: 1px solid #8f8f91; border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding-left: 5px; }</string>
+           </property>
+           <property name="placeholderText">
+            <string>Rechercher</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="search_clear_bt">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Supprimer la recherche</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{border: 1px solid #8f8f91; border-left-width: 0px; border-bottom-right-radius: 5px; border-top-right-radius: 5px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #BAD0E7); }
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../icones/icons.qrc">
+             <normaloff>:/Images/search_clear.svg</normaloff>:/Images/search_clear.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="component_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{border: 0px solid #B2B2B2; padding-right: 1px; padding-top: 1px; padding-left: 1px; }
+QPushButton:checked{border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #D8D8D8, stop:1 #FFFFFF); }
+QPushButton:hover{border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; padding: 0px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #BAD0E7, stop:1 #FFFFFF); }</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../icones/icons.qrc">
+          <normaloff>:/Images/component.png</normaloff>:/Images/component.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="5">
+       <widget class="QLabel" name="favorite_title">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{color: #4D4D4D; border:1px solid #B2B2B2; border-top: 0px; background: #BAD0E7; padding-left: 5px; padding-right: 5px; }</string>
+        </property>
+        <property name="text">
+         <string>Favoris</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6" colspan="5">
+       <widget class="QLabel" name="search_title">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>255</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{color: #4D4D4D; border:1px solid #B2B2B2; border-top: 0px; border-left: 0px; background: #BAD0E7; padding-left: 5px; padding-right: 5px; } </string>
+        </property>
+        <property name="text">
+         <string>Recherche</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="11">
+       <widget class="QWidget" name="end_title" native="true">
+        <property name="styleSheet">
+         <string notr="true">QWidget#end_title{color: #4D4D4D; border:1px solid #B2B2B2; border-top: 0px; border-left: 0px; background: #BAD0E7; padding-left: 5px; padding-right: 5px; }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>material_bt</tabstop>
+  <tabstop>component_bt</tabstop>
+  <tabstop>formula_bt</tabstop>
+  <tabstop>import_bt</tabstop>
+  <tabstop>export_bt</tabstop>
+  <tabstop>search_bar</tabstop>
+  <tabstop>search_clear_bt</tabstop>
+  <tabstop>group_list</tabstop>
+  <tabstop>attributes_list</tabstop>
+  <tabstop>ok</tabstop>
+  <tabstop>quit</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../icones/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

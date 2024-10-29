@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calendar</class>
+ <widget class="QWidget" name="Calendar">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calendrier</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../icones/icons.qrc">
+    <normaloff>:/Images/asc.svg</normaloff>:/Images/asc.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Calendar {background:#FFFFFF}</string>
+  </property>
+  <layout class="QGridLayout" name="calendrier_layer">
+   <property name="verticalSpacing">
+    <number>15</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+    <widget class="QCalendarWidget" name="calendar_widget">
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#calendar_widget QWidget {alternate-background-color: #DBE4EE; }
+
+/*----------------*/
+
+#qt_calendar_navigationbar {background-color: #FFFFFF; border: 1px solid #8f8f91; border-bottom-width: 0px; border-top-left-radius:5px; border-top-right-radius: 5px; }
+
+/*----------------*/
+
+#qt_calendar_prevmonth { border: none; qproperty-icon: none; image: url(:/Images/calendar_down.svg);
+min-width: 20 px;  min-height: 20 px; border-top-left-radius: 5px; background-color: transparent; padding: 5px; margin-right: 5px; }
+
+#qt_calendar_prevmonth:hover {border: 1px solid #8f8f91; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+
+#qt_calendar_prevmonth:pressed {border: 1px solid #8f8f91;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }
+
+/*----------------*/
+
+#qt_calendar_monthbutton, #qt_calendar_yearbutton {color: #000; padding: 5px;  min-height: 20 px;  font-size: 13px; }
+#qt_calendar_monthbutton {width: 110 px; }
+#qt_calendar_monthbutton:hover, #qt_calendar_yearbutton:hover {border: 1px solid #8f8f91; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+
+#qt_calendar_monthbutton:pressed, #qt_calendar_yearbutton:pressed {border: 1px solid #8f8f91;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }
+
+/*----------------*/
+
+#qt_calendar_yearedit {color: #000; background-color: transparent;  padding: 5px; font-size: 13px; }
+
+/*----------------*/
+
+#qt_calendar_nextmonth { border: none; qproperty-icon: none; image: url(:/Images/calendar_up.svg);
+min-width: 20 px;  min-height: 20 px; border-top-right-radius: 5px; background-color: transparent; padding: 5px; margin-left: 5px; }
+
+#qt_calendar_nextmonth:hover {border: 1px solid #8f8f91; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+
+#qt_calendar_nextmonth:pressed {border: 1px solid #8f8f91;  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }
+
+/*----------------*/
+
+#calendar_widget QToolButton QMenu{background-color: #fff; width: 125 px; border: 1px solid #8f8f91}
+
+#calendar_widget QToolButton QMenu::item {padding-bottom: 1px; padding-left: 5px; padding-right: 5px; width: 114 px; }
+
+#calendar_widget QToolButton QMenu::item:selected {background-color: #BAD0E7; }
+
+#calendar_widget QToolButton::menu-indicator {nosubcontrol-origin: margin; subcontrol-position: right center; margin-top: 10 px; width: 20px; }
+
+/*----------------*/
+
+#qt_calendar_calendarview {border: 1px solid #8f8f91; selection-background-color: #DBE4EE; selection-color: #000}
+
+</string>
+     </property>
+     <property name="gridVisible">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QPushButton" name="today">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Afficher la date du jour</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border: 1px solid #8f8f91; border-radius: 5px ; padding-right: 10px; padding-left: 10px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #BAD0E7); }
+QPushButton:hover{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #F8F8F8, stop:1 #8FADCC); }
+QPushButton:pressed{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #8FADCC, stop:1 #F8F8F8); }</string>
+     </property>
+     <property name="text">
+      <string>Aujourd'hui</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../icones/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
