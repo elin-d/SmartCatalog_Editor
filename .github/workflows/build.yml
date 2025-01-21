@@ -33,5 +33,29 @@ jobs:
     - name: Upload the build as an artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Smart Catalog
+        name: SmartCatalog
         path: dist/smartcatalog.exe  # Path to the generated executable
+
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: SmartCatalog
+
+    - name: Publish GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: smartcatalog.exe
+        tag_name: v1.0.${{ github.run_number }}
+        release_name: "SmartCatalog Release v1.0.${{ github.run_number }}"
+        body: |
+          ## Please refer to the original repository.
+        draft: true
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
