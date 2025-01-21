@@ -1,0 +1,37 @@
+name: Build Python Executable
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when pushing to the main branch
+  pull_request:
+    branches:
+      - main  # Also trigger when a pull request is made to the main branch
+
+jobs:
+  build:
+    runs-on: windows-latest  # Use a Windows runner to build the executable
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Specify the Python version you're using
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyQt5 lxml send2trash ftfy clr dbf openpyxl requests pyinstaller
+
+    - name: Build executable
+      run: |
+        pyinstaller --clean --noconfirm smartcatalog.spec
+
+    - name: Upload the build as an artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Smart Catalog
+        path: dist/smartcatalog.exe  # Path to the generated executable

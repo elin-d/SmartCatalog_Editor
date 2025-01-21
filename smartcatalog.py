@@ -1,8 +1,16 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*
 
+import sys
 import os.path
 import subprocess
+
+if sys.stdin is None:
+    sys.stdin = open(os.devnull)
+if sys.stdout is None:
+    sys.stdout = open(os.devnull, 'w')
+if sys.stderr is None:
+    sys.stderr = open(os.devnull, 'w')
 
 from attribute_add import AttributesWidget
 from attributes_loader import AttributesDetailLoader
